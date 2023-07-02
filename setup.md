@@ -30,7 +30,8 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 - Download the Git for Windows [installer](https://gitforwindows.org/)
 - Run the installer and follow the steps below:
- 
+	1. Git Setup
+	   		+ Click on "Next" four times (two times if you've previously
 
 :::::::::::::::::::::::::
 
