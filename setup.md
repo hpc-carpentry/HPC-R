@@ -87,7 +87,7 @@ This will provide you with both Git and Bash in the Git Bash program.
 
 ###### Video Tutorial {#winvid}
 
-![](https://www.youtube-nocookie.com/embed/339AEqk9c-8)
+![](https://www.youtu.be/339AEqk9c-8)
 
 :::::::::::::::::::::::::
 
@@ -115,7 +115,7 @@ and follow the instructions on "How to change your default shell".
         
 ##### Video Tutorial {#macvid}
 
-![](https://www.youtube-nocookie.com/embed/9LQhwETCdwY)
+![](https://www.youtu.be/9LQhwETCdwY)
 
 :::::::::::::::::::::::::
 
