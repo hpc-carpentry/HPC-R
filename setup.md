@@ -115,7 +115,13 @@ and follow the instructions on "How to change your default shell".
         
 ##### Video Tutorial {#macvid}
 
-![](https://www.youtu.be/9LQhwETCdwY)
+<div>
+<div>
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-
+in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbra
+nding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
+</div>
+</div>
 
 :::::::::::::::::::::::::
 
