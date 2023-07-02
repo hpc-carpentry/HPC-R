@@ -59,7 +59,16 @@ contact: 'maintainers-hpc@lists.carpentries.org' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
+- 00-before-we-start.Rmd
+- 01-intro.Rmd
+- 02-submit-job.Rmd
+- 03-multicore.Rmd
+- 04-blas.Rmd
+- 05-mpi.Rmd
+- 06-pbdmpi.Rmd
+- 07-random-forest-mpi.Rmd
+- 08-randomized-parallel-svd.Rmd
+- 09-conclusion.Rmd
 
 # Information for Learners
 learners: 
