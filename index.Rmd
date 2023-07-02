@@ -45,66 +45,61 @@ they might need help from an IT administrator.
 
 - Download the Git for Windows [installer](https://gitforwindows.org/)
 - Run the installer and follow the steps below:
-1. Git Setup
-  - Click on "Next" four times (two times if you've previously
-    installed Git).  You don't need to change anything
-    in the Information, location, components, and start menu screens.
-  - **From the dropdown menu, "Choosing the default editor used by Git", select "Use the Nano editor by default" (NOTE: you will need to scroll *up* to find it) and click on "Next".**
-
-1. Adjusting the name of the initial branch in new repositories 
-              
-  - On the page that says "Adjusting the name of the initial branch in new repositories", ensure that
-  "Let Git decide" is selected. This will ensure the highest level of compatibility for our lessons.
-
-1. Adjusting your PATH environment
-
-  - Ensure that "Git from the command line and also from 3rd-party software" is selected and
-  click on "Next". (If you don't do this Git Bash will not work properly, requiring you to
-  remove the Git Bash installation, re-run the installer and to select the "Git from the
-  command line and also from 3rd-party software" option.)
-
-1. Choosing the SSH executable
-  - Select "Use bundled OpenSSH".
-1. Choosing HTTPS transport backend
-  - Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
-::::::: Comment
-This should mean that people behind firewalls with their own root certificate authorities are
-still able to access remote git repos.
-:::::::
-1. Configuring the line ending conversions
-  - Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
-1. Configuring the terminal emulator to use with Git Bash
-  - **Ensure that "Use Windows' default console window" is selected and click on "Next"**
-1. Configuring extra options {% endcomment %}
-  - Ensure that "Default (fast-forward or merge) is selected and click "Next"
-  - Ensure that "Git Credential Manager" is selected and click on "Next".
-  - Ensure that "Enable file system caching" is selected and click on "Next".
-1. Configuring experimental options 
-  - Click on "Install"
-```output
-Installing
-Completing the Git Setup Wizard
-```
-1. As of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next"
-   - Click on "Finish" or "Next".
-1. If your "HOME" environment variable is not set (or you don't know what this is):
-  - Open command prompt (Open Start Menu then type `cmd` and press <kbd>Enter</kbd>)
-  - Type the following line into the command prompt window exactly as shown:
-```bash
-setx HOME "%USERPROFILE%"
-```
-  - Press <kbd>Enter</kbd>, you should see
-```output
-SUCCESS: Specified value was saved.
-```
-  - Quit command prompt by typing `exit` then pressing <kbd>Enter</kbd>
+  1. Git Setup
+    + Click on "Next" four times (two times if you've previously
+      installed Git).  You don't need to change anything
+      in the Information, location, components, and start menu screens.
+    + **From the dropdown menu, "Choosing the default editor used by Git",
+      select "Use the Nano editor by default" (NOTE: you will need to scroll
+      *up* to find it) and click on "Next".**
+  1. Adjusting the name of the initial branch in new repositories 
+    + On the page that says "Adjusting the name of the initial branch in new repositories", ensure that
+      "Let Git decide" is selected. This will ensure the highest level of compatibility for our lessons.
+  1. Adjusting your PATH environment
+    + Ensure that "Git from the command line and also from 3rd-party software" is selected and
+      click on "Next". (If you don't do this Git Bash will not work properly, requiring you to
+      remove the Git Bash installation, re-run the installer and to select the "Git from the
+      command line and also from 3rd-party software" option.)
+  1. Choosing the SSH executable
+    + Select "Use bundled OpenSSH".
+  1. Choosing HTTPS transport backend
+    + Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
+    + This should mean that people behind firewalls with their own root certificate authorities are
+      still able to access remote git repos.
+  1. Configuring the line ending conversions
+    + Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
+  1. Configuring the terminal emulator to use with Git Bash
+    + **Ensure that "Use Windows' default console window" is selected and click on "Next"**
+  1. Configuring extra options
+    + Ensure that "Default (fast-forward or merge) is selected and click "Next"
+    + Ensure that "Git Credential Manager" is selected and click on "Next".
+    + Ensure that "Enable file system caching" is selected and click on "Next".
+  1. Configuring experimental options 
+    + Click on "Install"
+      ```output
+      Installing
+      Completing the Git Setup Wizard
+      ```
+  1. As of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next"
+    + Click on "Finish" or "Next".
+  1. If your "HOME" environment variable is not set (or you don't know what this is):
+    + Open command prompt (Open Start Menu then type `cmd` and press <kbd>Enter</kbd>)
+    + Type the following line into the command prompt window exactly as shown:
+    ```bash
+    setx HOME "%USERPROFILE%"
+    ```
+    + Press <kbd>Enter</kbd>, you should see
+    ```output
+    SUCCESS: Specified value was saved.
+    ```
+    + Quit command prompt by typing `exit` then pressing <kbd>Enter</kbd>
 
 This will provide you with both Git and Bash in the Git Bash program.
 
 ##### Video Tutorial {#winvid}
      
 <div>
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
 </div>
      
 #### MacOS
@@ -128,7 +123,7 @@ and follow the instructions on "How to change your default shell".
 ##### Video Tutorial {#macvid}
 
 <div>
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
 </div>
         
 #### Linux
@@ -275,7 +270,11 @@ computer. However, the details are outside of the scope of this lesson.
 ## Acknowledgments
 
 This lesson draws material from
+
 - [R for HPC](https://github.com/RBigData/R4HPC)
+
 - [R Ecology lesson](https://datacarpentry.org/R-ecology-lesson/)
+
 - [R Social Science lesson](https://datacarpentry.org/r-socialsci)
+
 - [Unix Shell lesson](https://swcarpentry.github.io/shell-novice/)  
