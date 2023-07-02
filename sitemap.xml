@@ -19,6 +19,9 @@
     <loc>https://hpc-carpentry.github.io/HPC-R/05-mpi.html</loc>
   </url>
   <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/06-pbdmpi.html</loc>
+  </url>
+  <url>
     <loc>https://hpc-carpentry.github.io/HPC-R/06-pdbmpi.html</loc>
   </url>
   <url>
@@ -65,6 +68,9 @@
   </url>
   <url>
     <loc>https://hpc-carpentry.github.io/HPC-R/instructor/05-mpi.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/06-pbdmpi.html</loc>
   </url>
   <url>
     <loc>https://hpc-carpentry.github.io/HPC-R/instructor/06-pdbmpi.html</loc>
