@@ -87,7 +87,13 @@ This will provide you with both Git and Bash in the Git Bash program.
 
 ###### Video Tutorial {#winvid}
 
-![](https://www.youtu.be/339AEqk9c-8)
+<div>
+<div>
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-
+in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0"></ifr
+ame>
+</div>
+</div>
 
 :::::::::::::::::::::::::
 
