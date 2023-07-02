@@ -2,18 +2,19 @@
 title: Setup
 ---
 
+<!--
 FIXME: Setup instructions live in this document. Please specify the tools and
 the data sets the Learner needs to have installed.
-<!--
+
 ## Data Sets
 
-<!--
 FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
 
 Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
 -->
+
 ## Software Setup
 
 ::::::::::::::::::::::::::::::::::::::: discussion
@@ -24,7 +25,7 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 :::::::::::::::: solution
 
-### Windows
+#### Windows
 
 - Download the Git for Windows [installer](https://gitforwindows.org/)
 - Run the installer and follow the steps below:
@@ -83,7 +84,7 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 This will provide you with both Git and Bash in the Git Bash program.
 
-##### Video Tutorial {#winvid}
+###### Video Tutorial {#winvid}
      
 <div>
 <iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-
@@ -96,7 +97,7 @@ ame>
 
 :::::::::::::::: solution
 
-### MacOS
+#### MacOS
 
 
 The default shell in some versions of macOS is Bash, and
@@ -127,7 +128,7 @@ nding=1&playsinline=1&iv_load_policy=3&rel=0"></iframe>
 
 :::::::::::::::: solution
 
-### Linux
+#### Linux
 
 The default shell is usually Bash and there is usually no need to
 install anything.
@@ -139,6 +140,7 @@ can run Bash by typing `bash`.
 
 
 :::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::::: discussion
 
@@ -158,7 +160,7 @@ your operating system below. You have to install R before you install RStudio.
 
 :::::::::::::::: solution
 
-### Windows
+#### Windows
 
 - Download R from the
   [CRAN website](https://cran.r-project.org/bin/windows/base/release.htm).
@@ -175,7 +177,7 @@ your operating system below. You have to install R before you install RStudio.
 
 :::::::::::::::: solution
 
-### MacOS
+#### MacOS
 
 - Download R from
   the [CRAN website](https://cran.r-project.org/bin/macosx/).
@@ -194,7 +196,7 @@ your operating system below. You have to install R before you install RStudio.
 
 :::::::::::::::: solution
 
-### Linux
+#### Linux
 
 - Follow the instructions for your distribution
   from [CRAN](https://cloud.r-project.org/bin/linux), they provide information
