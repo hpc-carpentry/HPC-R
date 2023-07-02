@@ -432,7 +432,7 @@ in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbrandi
   MacOS
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The default shell in some versions of macOS is Bash, and Bash is
 available in all versions, so no need to install anything. You access
@@ -465,7 +465,7 @@ shell”.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The default shell is usually Bash and there is usually no need to
 install anything.</p>
@@ -507,7 +507,7 @@ before you install RStudio.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ul><li>Download R from the <a href="https://cran.r-project.org/bin/windows/base/release.htm" class="external-link">CRAN
 website</a>.</li>
@@ -531,7 +531,7 @@ don’t get any error messages.</li>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <ul><li>Download R from the <a href="https://cran.r-project.org/bin/macosx/" class="external-link">CRAN website</a>.</li>
 <li>Select the <code>.pkg</code> file for the latest R version</li>
@@ -557,7 +557,7 @@ don’t get any error messages.</li>
   Linux
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ul><li>Follow the instructions for your distribution from <a href="https://cloud.r-project.org/bin/linux" class="external-link">CRAN</a>, they provide
 information to get the most recent version of R for common
@@ -621,14 +621,31 @@ contain useful R code written by other people. We will use the packages
 following command into the console window (look for a blinking cursor on
 the bottom left), then press the <kbd>Enter</kbd> (Windows and Linux) or
 <kbd>Return</kbd> (MacOS) to execute the command.</p>
-<p><code>{r, eval=FALSE} install.packages(c("pbdR", "pbdML", "pbdMPI", "pbdMAT", "flexiblas",                    "parallel", "randomForest"))</code></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"pbdR"</span>, <span class="st">"pbdML"</span>, <span class="st">"pbdMPI"</span>, <span class="st">"pbdMAT"</span>, <span class="st">"flexiblas"</span>,</span>
+<span>                   <span class="st">"parallel"</span>, <span class="st">"randomForest"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
 <p>Alternatively, you can install the packages using RStudio’s graphical
 user interface by going to <code>Tools &gt; Install Packages</code> and
 typing the names of the packages separated by a comma.</p>
 <p>R tries to download and install the packages on your machine. When
 the installation has finished, you can try to load the packages by
 pasting the following code into the console:</p>
-<p><code>{r, eval=FALSE} library(pbdR) library(pbdML) library(pbdMPI) library(pbdMAT) library(flexiblas) library(parallel) library(randomForest)</code></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">pbdR</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdML</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdMPI</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdMAT</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">flexiblas</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">parallel</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">randomForest</span><span class="op">)</span></span></code></pre>
+</div>
 <p>If you do not see an error like
 <code>there is no package called ‘...'</code> you are good to go!</p>
 </div>
