@@ -335,8 +335,8 @@ need help from an IT administrator.</p>
 <h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h4>
 <ul><li>Download the Git for Windows <a href="https://gitforwindows.org/" class="external-link">installer</a>
 </li>
-<li>Run the installer and follow the steps below:</li>
-</ul><ol style="list-style-type: decimal"><li>Git Setup</li>
+<li>Run the installer and follow the steps below:
+<ol style="list-style-type: decimal"><li>Git Setup</li>
 </ol><ul><li>Click on “Next” four times (two times if you’ve previously installed
 Git). You don’t need to change anything in the Information, location,
 components, and start menu screens.</li>
@@ -357,16 +357,16 @@ command line and also from 3rd-party software” option.)</li>
 </ol><ul><li>Select “Use bundled OpenSSH”.</li>
 </ul><ol style="list-style-type: decimal"><li>Choosing HTTPS transport backend</li>
 </ol><ul><li>Ensure that “Use the native Windows Secure Channel Library” is
-selected and click on “Next”. ::::::: Comment This should mean that
-people behind firewalls with their own root certificate authorities are
-still able to access remote git repos. :::::::</li>
+selected and click on “Next”.</li>
+<li>This should mean that people behind firewalls with their own root
+certificate authorities are still able to access remote git repos.</li>
 </ul><ol style="list-style-type: decimal"><li>Configuring the line ending conversions</li>
 </ol><ul><li>Ensure that “Checkout Windows-style, commit Unix-style line endings”
 is selected and click on “Next”.</li>
 </ul><ol style="list-style-type: decimal"><li>Configuring the terminal emulator to use with Git Bash</li>
 </ol><ul><li><strong>Ensure that “Use Windows’ default console window” is
 selected and click on “Next”</strong></li>
-</ul><ol style="list-style-type: decimal"><li>Configuring extra options {% endcomment %}</li>
+</ul><ol style="list-style-type: decimal"><li>Configuring extra options</li>
 </ol><ul><li>Ensure that “Default (fast-forward or merge) is selected and
 click”Next”</li>
 <li>Ensure that “Git Credential Manager” is selected and click on
@@ -374,27 +374,22 @@ click”Next”</li>
 <li>Ensure that “Enable file system caching” is selected and click on
 “Next”.</li>
 </ul><ol style="list-style-type: decimal"><li>Configuring experimental options</li>
-</ol><ul><li>Click on “Install”</li>
-</ul><div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Installing
-Completing the Git Setup Wizard</code></pre>
-</div>
-<ol style="list-style-type: decimal"><li>As of 2020-06-02, the Window will say “click Finish”, but the button
-is labelled as “Next”
-<ul><li>Click on “Finish” or “Next”.</li>
-</ul></li>
-<li>If your “HOME” environment variable is not set (or you don’t know
+</ol><ul><li>Click on “Install”
+<code>output     Installing     Completing the Git Setup Wizard</code>
+</li>
+</ul><ol style="list-style-type: decimal"><li>As of 2020-06-02, the Window will say “click Finish”, but the button
+is labelled as “Next”</li>
+</ol><ul><li>Click on “Finish” or “Next”.</li>
+</ul><ol style="list-style-type: decimal"><li>If your “HOME” environment variable is not set (or you don’t know
 what this is):</li>
 </ol><ul><li>Open command prompt (Open Start Menu then type <code>cmd</code> and
 press <kbd>Enter</kbd>)</li>
 <li>Type the following line into the command prompt window exactly as
 shown:</li>
-</ul><div class="codewrapper sourceCode" id="cb2">
+</ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">setx</span> HOME <span class="st">"%USERPROFILE%"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">setx</span> HOME <span class="st">"%USERPROFILE%"</span></span></code></pre>
 </div>
 <ul><li>Press <kbd>Enter</kbd>, you should see</li>
 </ul><div class="codewrapper">
@@ -405,12 +400,13 @@ shown:</li>
 <ul><li>Quit command prompt by typing <code>exit</code> then pressing
 <kbd>Enter</kbd>
 </li>
+</ul></li>
 </ul><p>This will provide you with both Git and Bash in the Git Bash
 program.</p>
 <div class="section level5">
 <h5 id="winvid">Video Tutorial<a class="anchor" aria-label="anchor" href="#winvid"></a></h5>
 <div>
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&amp;playsinline=1&amp;iv_load_policy=3&amp;rel=0">
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&amp;playsinline=1&amp;iv_load_policy=3&amp;rel=0">
 </iframe>
 </div>
 </div>
@@ -433,7 +429,7 @@ shell”.</p>
 <div class="section level5">
 <h5 id="macvid">Video Tutorial<a class="anchor" aria-label="anchor" href="#macvid"></a></h5>
 <div>
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&amp;playsinline=1&amp;iv_load_policy=3&amp;rel=0">
+<iframe type="text/html" style="width:50%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&amp;playsinline=1&amp;iv_load_policy=3&amp;rel=0">
 </iframe>
 </div>
 </div>
@@ -549,14 +545,30 @@ contain useful R code written by other people. We will use the packages
 following command into the console window (look for a blinking cursor on
 the bottom left), then press the <kbd>Enter</kbd> (Windows and Linux) or
 <kbd>Return</kbd> (MacOS) to execute the command.</p>
-<p><code>{r, eval=FALSE} install.packages(c("pbdR", "pbdML", "pbdMPI", "pbdMAT", "flexiblas", "parallel", "randomForest"))</code></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"pbdR"</span>, <span class="st">"pbdML"</span>, <span class="st">"pbdMPI"</span>, <span class="st">"pbdMAT"</span>, <span class="st">"flexiblas"</span>, <span class="st">"parallel"</span>, <span class="st">"randomForest"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
 <p>Alternatively, you can install the packages using RStudio’s graphical
 user interface by going to <code>Tools &gt; Install Packages</code> and
 typing the names of the packages separated by a comma.</p>
 <p>R tries to download and install the packages on your machine. When
 the installation has finished, you can try to load the packages by
 pasting the following code into the console:</p>
-<p><code>{r, eval=FALSE} library(pbdR) library(pbdML) library(pbdMPI) library(pbdMAT) library(flexiblas) library(parallel) library(randomForest)</code></p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">pbdR</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdML</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdMPI</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">pbdMAT</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">flexiblas</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">parallel</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">randomForest</span><span class="op">)</span></span></code></pre>
+</div>
 <p>If you do not see an error like
 <code>there is no package called ‘...'</code> you are good to go!</p>
 </div>
@@ -578,15 +590,19 @@ outside of the scope of this lesson.</p>
 </div>
 </section><section id="acknowledgments"><h2 class="section-heading">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
 </h2>
-<hr class="half-width"><p>This lesson draws material from - <a href="https://github.com/RBigData/R4HPC" class="external-link">R for HPC</a> - <a href="https://datacarpentry.org/R-ecology-lesson/" class="external-link">R Ecology lesson</a>
-- <a href="https://datacarpentry.org/r-socialsci" class="external-link">R Social Science
-lesson</a> - <a href="https://swcarpentry.github.io/shell-novice/" class="external-link">Unix
-Shell lesson</a></p>
-<!-- 
+<hr class="half-width"><p>This lesson draws material from</p>
+<ul><li><p><a href="https://github.com/RBigData/R4HPC" class="external-link">R for
+HPC</a></p></li>
+<li><p><a href="https://datacarpentry.org/R-ecology-lesson/" class="external-link">R Ecology
+lesson</a></p></li>
+<li><p><a href="https://datacarpentry.org/r-socialsci" class="external-link">R Social Science
+lesson</a></p></li>
+<li><p><a href="https://swcarpentry.github.io/shell-novice/" class="external-link">Unix Shell
+lesson</a></p></li>
+</ul><!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
- -->
-</section><section id="setup"><p>FIXME: Setup instructions live in this document. Please specify the
+ --></section><section id="setup"><p>FIXME: Setup instructions live in this document. Please specify the
 tools and the data sets the Learner needs to have installed.</p>
 <section id="data-sets"><h2 class="section-heading">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a>
 </h2>
@@ -621,7 +637,7 @@ e.g. online setup) in the solutions blocks.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Use PuTTY</p>
 </div>
@@ -635,7 +651,7 @@ e.g. online setup) in the solutions blocks.</p>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Use Terminal.app</p>
 </div>
@@ -649,7 +665,7 @@ e.g. online setup) in the solutions blocks.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Use Terminal</p>
 </div>
