@@ -1,45 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/404.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/00-before-we-start.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/CODE_OF_CONDUCT.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/01-intro.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/LICENSE.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/02-submit-job.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/index.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/03-multicore.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/404.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/04-blas.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/05-mpi.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/LICENSE.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/06-pdbmpi.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/index.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/07-random-forest-mpi.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/introduction.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/08-randomized-parallel-svd.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/profiles.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/09-conclusion.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/reference.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/introduction.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/profiles.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/reference.html</loc>
+    <loc>https://hpc-carpentry.github.io/HPC-R/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/images.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/index.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/00-before-we-start.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/01-intro.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/02-submit-job.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/03-multicore.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/04-blas.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/05-mpi.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/06-pdbmpi.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/07-random-forest-mpi.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/08-randomized-parallel-svd.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/09-conclusion.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/404.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/images.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://hpc-carpentry.github.io/HPC-R/reference.html</loc>
   </url>
 </urlset>
