@@ -254,7 +254,8 @@ command into the console window (look for a blinking cursor on the bottom left),
 then press the <kbd>Enter</kbd> (Windows and Linux) or <kbd>Return</kbd> (MacOS)
 to execute the command.
 
-```{r, eval=FALSE}
+
+```r
 install.packages(c("pbdR", "pbdML", "pbdMPI", "pbdMAT", "flexiblas",
                    "parallel", "randomForest"))
 ```
@@ -267,7 +268,8 @@ R tries to download and install the packages on your machine.
 When the installation has finished, you can try to load the
 packages by pasting the following code into the console:
 
-```{r, eval=FALSE}
+
+```r
 library(pbdR)
 library(pbdML)
 library(pbdMPI)
