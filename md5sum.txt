@@ -16,6 +16,6 @@
 "episodes/09-conclusion.Rmd" "ff977557e9e880564e0636c2c3ff3fe4" "site/built/09-conclusion.md" "2023-07-02"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-07-02"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-07-02"
-"learners/setup.Rmd" "1258f66f0a02a1081f7ffcd279ba3269" "site/built/setup.md" "2023-07-02"
+"learners/setup.Rmd" "45109f510ec110e223d16b82f75f8683" "site/built/setup.md" "2023-07-02"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2023-07-02"
 "renv/profiles/lesson-requirements/renv.lock" "ccc30fb8e35957a933a3b53e0d4e6b4a" "site/built/renv.lock" "2023-07-02"
