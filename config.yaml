@@ -65,7 +65,7 @@ episodes:
 - 03-multicore.Rmd
 - 04-blas.Rmd
 - 05-mpi.Rmd
-- 06-pdbmpi.Rmd
+- 06-pbdmpi.Rmd
 - 07-random-forest-mpi.Rmd
 - 08-randomized-parallel-svd.Rmd
 - 09-conclusion.Rmd
