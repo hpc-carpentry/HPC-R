@@ -1,119 +1,152 @@
 ---
-title: "Using RMarkdown"
+title: "Multicore"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- Can parallelization decrease time to solution for my program?
+- What is machine learning?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Introduce machine learning, in particular the random forest algorithm
+- Demonstrate serial and parallel implementations of the random forest algorithm
+- Show that statistical machine learning models can be used to classify data after training on an existing dataset
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
+### Serial Implementation
 
 ```r
-paste("This", "new", "lesson", "looks", "good")
+suppressMessages(library(randomForest))
+data(LetterRecognition, package = "mlbench")
+set.seed(seed = 123)
+
+n = nrow(LetterRecognition)
+n_test = floor(0.2 * n)
+i_test = sample.int(n, n_test)
+train = LetterRecognition[-i_test, ]
+test = LetterRecognition[i_test, ]
+
+rf.all = randomForest(lettr ~ ., train, ntree = 500, norm.votes = FALSE)
+pred = predict(rf.all, test)
+
+correct = sum(pred == test$lettr)
+cat("Proportion Correct:", correct/(n_test), "\n")
 ```
 
-:::::::::::::::::::::::: solution 
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can also include figures generated from R Markdown:
-
+### Parallel Multicore Implementation
 
 ```r
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
+library(parallel)                                       #<<
+library(randomForest)
+data(LetterRecognition, package = "mlbench")
+set.seed(seed = 123, "L'Ecuyer-CMRG")                   #<<
+
+n = nrow(LetterRecognition)
+n_test = floor(0.2 * n)
+i_test = sample.int(n, n_test)
+train = LetterRecognition[-i_test, ]
+test = LetterRecognition[i_test, ]
+
+nc = as.numeric(commandArgs(TRUE)[2])                    #<<
+ntree = lapply(splitIndices(500, nc), length)            #<<
+rf = function(x, train) randomForest(lettr ~ ., train, ntree=x, #<<
+                                     norm.votes = FALSE)        #<<
+rf.out = mclapply(ntree, rf, train = train, mc.cores = nc)      #<<
+rf.all = do.call(combine, rf.out)                        #<<
+
+crows = splitIndices(nrow(test), nc)                     #<<
+rfp = function(x) as.vector(predict(rf.all, test[x, ]))  #<<
+cpred = mclapply(crows, rfp, mc.cores = nc)              #<<
+pred = do.call(c, cpred)                                 #<<
+
+correct <- sum(pred == test$lettr)
+cat("Proportion Correct:", correct/(n_test), "\n")
 ```
+:::::::::::::::::::::::: solution
 
-<div class="figure" style="text-align: center">
-<img src="fig/03-multicore-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
-<p class="caption">Sun arise each and every morning</p>
-</div>
+### SLURM submission script
 
-Or you can use standard markdown for static figures with the following syntax:
+```bash
+#!/bin/bash
+#SBATCH -J rf
+#SBATCH -A CSC143
+#SBATCH -p batch
+#SBATCH --nodes=1
+#SBATCH -t 00:40:00
+#SBATCH --mem=0
+#SBATCH -e ./rf.e
+#SBATCH -o ./rf.o
+#SBATCH --open-mode=truncate
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+cd ~/R4HPC/code_2
+pwd
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+## modules are specific to andes.olcf.ornl.gov
+module load openblas/0.3.17-omp
+module load flexiblas
+flexiblas add OpenBLAS $OLCF_OPENBLAS_ROOT/lib/libopenblas.so
+export LD_PRELOAD=$OLCF_FLEXIBLAS_ROOT/lib64/libflexiblas.so
+module load r
+echo -e "loaded R with FlexiBLAS"
+module list
 
-## Math
+time Rscript rf_serial.r
+time Rscript rf_mc.r --args 1
+time Rscript rf_mc.r --args 2
+time Rscript rf_mc.r --args 4
+time Rscript rf_mc.r --args 8
+time Rscript rf_mc.r --args 16
+time Rscript rf_mc.r --args 32
+time Rscript rf_mc.r --args 64
+```
+:::::::::::::::::::::::::::::::::
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+:::::::::::::::::::::::: solution
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+### PBS submission script
 
-Cool, right?
+```bash
+#!/bin/bash
+#PBS -N rf
+#PBS -l select=1:ncpus=128
+#PBS -l walltime=00:05:00
+#PBS -q qexp
+#PBS -e rf.e
+#PBS -o rf.o
+
+cd ~/R4HPC/code_2
+pwd
+
+module load R
+echo "loaded R"
+
+time Rscript rf_serial.r
+time Rscript rf_mc.r --args 1
+time Rscript rf_mc.r --args 2
+time Rscript rf_mc.r --args 4
+time Rscript rf_mc.r --args 8
+time Rscript rf_mc.r --args 16
+time Rscript rf_mc.r --args 32
+time Rscript rf_mc.r --args 64
+time Rscript rf_mc.r --args 128
+```
+:::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- To evaluate the fitted model, the availabe data is split into training and testing sets
+- Parallelization decreases the training time
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-[r-markdown]: https://rmarkdown.rstudio.com/
