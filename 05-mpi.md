@@ -1,5 +1,5 @@
 ---
-title: "MPI - Distributed Memory Parallelizm"
+title: "MPI - Distributed Memory Parallelism"
 teaching: 10
 exercises: 0
 ---
@@ -13,7 +13,7 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Demonstrate how to submit a job on multiple nodes
-- Demonstrate that a program with distributed memory parallelizm can be run on a shared memory node
+- Demonstrate that a program with distributed memory parallelism can be run on a shared memory node
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

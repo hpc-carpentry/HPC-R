@@ -1,5 +1,5 @@
 ---
-title: "MPI - Distributed Memory Parallelizm"
+title: "MPI - Distributed Memory Parallelism"
 teaching: 10
 exercises: 2
 ---
@@ -12,8 +12,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Demonstrate that distributed memory parallelizm is useful for working with large data
-- Demonstrate that distributed memory parallelizm can lead to improved time to solution
+- Demonstrate that distributed memory parallelism is useful for working with large data
+- Demonstrate that distributed memory parallelism can lead to improved time to solution
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -146,7 +146,7 @@ time mpirun --map-by ppr:32:node Rscript rf_mpi.R
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Classification can be used for data other than digits, such as diamonds
-- Distributed memory parallelizm can speed up training
+- Distributed memory parallelism can speed up training
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

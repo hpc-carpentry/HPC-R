@@ -408,7 +408,7 @@ finalize()
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - The message passing interface offers many operations that can be used to
-  efficiently and portably add parallelizm to your program
+  efficiently and portably add parallelism to your program
 - It is possible to use parallel libraries to minimize the amount of parallel
   programming you need to do for your data exploration and data analysis
 
