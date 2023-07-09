@@ -1,7 +1,7 @@
 ---
 title: "MPI - Distributed Memory Parallelizm"
 teaching: 10
-exercises: 2
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -89,6 +89,8 @@ echo "loaded R"
 
 mpirun --map-by ppr:32:node Rscript hello_world.R
 ```
+:::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
