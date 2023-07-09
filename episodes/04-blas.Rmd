@@ -14,7 +14,7 @@ exercises: 2
 
 - Introduce the Basic Linear Algebra Subroutines (BLAS)
 - Show that BLAS routines are used from R for statistical calculations
-- Demonstrate that parallelization can improve time to solution
+- Demonstrate that parallelisation can improve time to solution
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

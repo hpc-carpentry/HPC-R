@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Can parallelization decrease time to solution for my program?
+- Can parallelisation decrease time to solution for my program?
 - What is machine learning?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -146,7 +146,7 @@ time Rscript rf_mc.r --args 128
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - To evaluate the fitted model, the availabe data is split into training and testing sets
-- Parallelization decreases the training time
+- Parallelisation decreases the training time
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

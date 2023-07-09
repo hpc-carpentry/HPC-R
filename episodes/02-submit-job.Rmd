@@ -166,7 +166,7 @@ time mpirun --map-by ppr:4:node Rscript hello_balance.R
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Parallel R code distributes work
-- There is shared memory and distributed memory parallelizm
+- There is shared memory and distributed memory parallelism
 - You can test parallel code on your own local machine
 - There are several different job schedulers, but they share many similarities so you can learn a new one when needed
 
