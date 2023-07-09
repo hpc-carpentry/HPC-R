@@ -240,7 +240,8 @@ of new versions every once in a while.
 
 During the course we will need a number of R packages. Packages contain useful
 R code written by other people. We will use the packages
-`pbdR`, `pbdML`, `pbdMPI`, `pbdMAT`, `flexiblas`, `parallel`, and `randomForest`.
+`pbdR`, `pbdML`, `pbdMPI`, `pbdMAT`, `flexiblas`, `memuse`, `mlbench`, `parallel`,
+`remotes` and `randomForest`.
 
 To try to install these packages, open RStudio and copy and paste the following
 command into the console window (look for a blinking cursor on the bottom left),
@@ -249,7 +250,8 @@ to execute the command.
 
 ```{r, eval=FALSE}
 install.packages(c("pbdR", "pbdML", "pbdMPI", "pbdMAT",
-		   "flexiblas", "parallel", "randomForest"))
+		   "flexiblas", "memuse", "mlbench", 
+		   "parallel", "remotes", "randomForest"))
 ```
 
 Alternatively, you can install the packages using RStudio's graphical user
@@ -266,8 +268,11 @@ library(pbdML)
 library(pbdMPI)
 library(pbdMAT)
 library(flexiblas)
+library(memuse)
+library(mlbench)
 library(parallel)
 library(randomForest)
+library(remotes)
 ```
 
 If you do not see an error like `there is no package called ‘...'` you are good
