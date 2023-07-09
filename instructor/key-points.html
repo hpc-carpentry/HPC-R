@@ -201,7 +201,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-submit-job.html">3. Using RMarkdown</a>
+        <a href="02-submit-job.html">3. Submit a parallel job</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -213,7 +213,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="03-multicore.html">4. Using RMarkdown</a>
+        <a href="03-multicore.html">4. Multicore</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -225,7 +225,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="04-blas.html">5. Using RMarkdown</a>
+        <a href="04-blas.html">5. Blas</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -237,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="05-mpi.html">6. Using RMarkdown</a>
+        <a href="05-mpi.html">6. MPI - Distributed Memory Parallelizm</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -249,7 +249,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="06-pbdmpi.html">7. Using RMarkdown</a>
+        <a href="06-pbdmpi.html">7. pbdMPI - Parallel and Big Data interface to MPI</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -261,7 +261,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="07-random-forest-mpi.html">8. Using RMarkdown</a>
+        <a href="07-random-forest-mpi.html">8. MPI - Distributed Memory Parallelizm</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="08-randomized-parallel-svd.html">9. Using RMarkdown</a>
+        <a href="08-randomized-parallel-svd.html">9. Parallel Randomized Singular Value Decomposition for Classification</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -364,83 +364,54 @@ output</li>
 with your lesson</li>
 <li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
 locally</li>
-</ul></section><section id="02-submit-job"><h2 class="section-heading"><a href="02-submit-job.html">Using RMarkdown</a></h2>
+</ul></section><section id="02-submit-job"><h2 class="section-heading"><a href="02-submit-job.html">Submit a parallel job</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="03-multicore"><h2 class="section-heading"><a href="03-multicore.html">Using RMarkdown</a></h2>
+<li>Parallel R code distributes work</li>
+<li>There is shared memory and distributed memory parallelizm</li>
+<li>You can test parallel code on your own local machine</li>
+<li>There are several different job schedulers, but they share many
+similarities so you can learn a new one when needed</li>
+</ul></section><section id="03-multicore"><h2 class="section-heading"><a href="03-multicore.html">Multicore</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="04-blas"><h2 class="section-heading"><a href="04-blas.html">Using RMarkdown</a></h2>
+<li>To evaluate the fitted model, the availabe data is split into
+training and testing sets</li>
+<li>Parallelization decreases the training time</li>
+</ul></section><section id="04-blas"><h2 class="section-heading"><a href="04-blas.html">Blas</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="05-mpi"><h2 class="section-heading"><a href="05-mpi.html">Using RMarkdown</a></h2>
+<li>Many statistical calculations require matrix and vector
+operations</li>
+<li>When libraries are used, setting their parameters appropriately can
+improve your time to solution</li>
+</ul></section><section id="05-mpi"><h2 class="section-heading"><a href="05-mpi.html">MPI - Distributed Memory Parallelizm</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="06-pbdmpi"><h2 class="section-heading"><a href="06-pbdmpi.html">Using RMarkdown</a></h2>
+<li>One can run a distributed memory program on a shared memory
+node</li>
+</ul></section><section id="06-pbdmpi"><h2 class="section-heading"><a href="06-pbdmpi.html">pbdMPI - Parallel and Big Data interface to MPI</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="07-random-forest-mpi"><h2 class="section-heading"><a href="07-random-forest-mpi.html">Using RMarkdown</a></h2>
+<li>The message passing interface offers many operations that can be
+used to efficiently and portably add parallelizm to your program</li>
+<li>It is possible to use parallel libraries to minimize the amount of
+parallel programming you need to do for your data exploration and data
+analysis</li>
+</ul></section><section id="07-random-forest-mpi"><h2 class="section-heading"><a href="07-random-forest-mpi.html">MPI - Distributed Memory Parallelizm</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="08-randomized-parallel-svd"><h2 class="section-heading"><a href="08-randomized-parallel-svd.html">Using RMarkdown</a></h2>
+<li>Classification can be used for data other than digits, such as
+diamonds</li>
+<li>Distributed memory parallelizm can speed up training</li>
+</ul></section><section id="08-randomized-parallel-svd"><h2 class="section-heading"><a href="08-randomized-parallel-svd.html">Parallel Randomized Singular Value Decomposition for Classification</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>There are a variety of machine learning algorithms which can be used
+for classification</li>
+<li>Some will work better than others for your data</li>
+<li>The memory and compute requirements will differ, choose your
+algorithms and their implementations wisely!</li>
 </ul></section><section id="09-conclusion"><h2 class="section-heading"><a href="09-conclusion.html">Using RMarkdown</a></h2>
 <hr class="half-width">
 <ul>
@@ -477,7 +448,7 @@ locally</li>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.4" class="external-link">sandpaper (0.12.4)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.12.5)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.17" class="external-link">varnish (0.2.17)</a>.</p>
 			</div>
@@ -501,8 +472,8 @@ locally</li>
   "url": "https://hpc-carpentry.github.io/HPC-R/instructor/key-points.html",
   "identifier": "https://hpc-carpentry.github.io/HPC-R/instructor/key-points.html",
   "dateCreated": "2023-07-23",
-  "dateModified": "2023-07-04",
-  "datePublished": "2023-07-04"
+  "dateModified": "2023-07-09",
+  "datePublished": "2023-07-09"
 }
 
   </script><script>
